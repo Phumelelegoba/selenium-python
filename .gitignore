@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+
+chromedriver-linux64/
+chromedriver.zip
+drivers/
+
+.venv/
+.env
