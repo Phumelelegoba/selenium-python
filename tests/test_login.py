@@ -5,15 +5,15 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 driver = webdriver.Chrome()
-driver.get("https://fabfruits.yooma-erp.co.za/internal/#/ui/login")
+driver.get("https://testing.co.za")
 
 username_field = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.NAME, "username")))
-username_field.send_keys("sam")
+username_field.send_keys("Phumelele")
 
 driver.find_element(By.XPATH, "//button[@title='Sign in']").click()
 
 password_field = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.NAME, "password")))
-password_field.send_keys("sam123", Keys.ENTER)
+password_field.send_keys("Goba", Keys.ENTER)
 
 WebDriverWait(driver, 10).until(EC.url_contains("landing"))
 
